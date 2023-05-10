@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: capitalize;
+  background: rgb(228, 227, 227);
+}
+
+nav {
+  background: white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.icons {
+  display: none;
+}
+
+.nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.title span {
+  color: orangered;
+}
+
+.nav-toggle {
+  background: transparent;
+  border: transparent;
+  font-size: 2rem;
+  color: orangered;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-toggle:hover {
+  transform: rotate(90deg) scale(1.3);
+}
+
+ul {
+  list-style: none;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.show-links {
+  height: 172px;
+}
+
+.links li {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0.5rem 1rem;
+}
+
+.links li:hover {
+  padding-left: 1.5rem;
+  background: lightcoral;
+}
+
+.links li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+/* big screen */
+
+@media screen and (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-head {
+    padding: 0;
+  }
+
+  .nav-center {
+    padding: 1rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    height: auto;
+    display: flex;
+  }
+
+  .links li {
+    padding: 0;
+    margin: 0 0.65rem;
+  }
+
+  .links li:hover {
+    background: transparent;
+    padding-left: 0;
+  }
+
+  .links li a:hover {
+    color: orangered;
+  }
+
+  .icons a {
+    margin-left: 0.75rem;
+    color: black;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+  }
+
+  .icons a:hover {
+    color: orangered;
+  }
+}
